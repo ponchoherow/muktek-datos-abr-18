@@ -25,9 +25,10 @@ SELECT LAST_NAME, JOB_ID, SALARY FROM Employees
 	WHERE JOB_ID IN ('IT_PROG','SH_CLERK')
     AND SALARY NOT IN (4500,1000,15000)
 
- #7 Write a query to display the last name of employees whose names have exactly 6 characters.
- SELECT LAST_NAME FROM Employees
-	WHERE LAST_NAME LIKE '______'
+#Ajuste pregunta 7: mostrar los nombres con 6 caracteres
+
+SELECT FIRST_NAME FROM Employees 
+	WHERE FIRST_NAME LIKE '______';
 
 #8 Write a query to display the last name of employees having 'e' as the third character.
  SELECT LAST_NAME FROM Employees
