@@ -18,7 +18,8 @@ WHERE e.department_id = d.department_id) department FROM Employees e ORDER BY de
 
 
  #4 Write a query to fetch even numbered records from employees table. Employees
-SELECT FIRST_NAME, LAST_NAME, Employee_ID FROM Employees WHERE (SELECT Employee_ID % 2) != 0;
+ #ERA EVEN JAJAJA SORRY
+SELECT FIRST_NAME, LAST_NAME, Employee_ID FROM Employees WHERE (SELECT Employee_ID % 2) = 0;
 
 #5 Write a query to find the 5th maximum salary in the employees table. Employees
 SELECT DISTINCT SALARY FROM Employees e1 
