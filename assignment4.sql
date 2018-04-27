@@ -18,10 +18,7 @@ WHERE e.department_id = d.department_id) department FROM Employees e ORDER BY de
 
 
  #4 Write a query to fetch even numbered records from employees table. Employees
- SET @i = 0; 
-SELECT i, employee_id 
-FROM (SELECT @i := @i + 1 AS i, employee_id FROM Employees)
-a WHERE MOD(a.i, 2) = 0;
+SELECT FIRST_NAME, LAST_NAME, Employee_ID FROM Employees WHERE (SELECT Employee_ID % 2) != 0;
 
 #5 Write a query to find the 5th maximum salary in the employees table. Employees
 SELECT DISTINCT SALARY FROM Employees e1 
@@ -105,6 +102,7 @@ JOIN Employees e ON (a.employee_id = e.employee_id)
 WHERE SALARY > 10000;
 
 8#Write a query to display department name, name (first_name, last_name), hire date, salary of the manager for all managers whose experience is more than 15 years.
+SELECT DISTINCT DEPARTMENT_NAME, FIRST_NAME, LAST_NAME, SALARY, HIRE_DATE
 FROM Departments d, Employees e, JobHistory jh
 WHERE d.DEPARTMENT_ID = e.DEPARTMENT_ID
 AND YEAR(END_DATE - START_DATE) > 15
